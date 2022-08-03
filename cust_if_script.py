@@ -1,47 +1,63 @@
 #!/usr/bin/env python3
 
+#Beyonce Quiz
+
+#Tallies up score by using a count variable that is set to zero
 count = 0
 
-print("How big of a Taylor Swift fan are you? Play this quiz to find out")
+
+#Welcome messages
+print("How big of a Beyonce fan are you? Play this quiz to find out")
 print("Let's begin")
 
-grammys = str(input("How many grammys has Taylor won?: "))
-middlename = input("What is her middle name?: ")
-longsong = input("What is the name of her album that is based on a color?: ")
-biggesthit = input("What is her best selling song called?: ")
-cats = str(input("What number of cats does she own?: "))
-year = str(input("What year was Taylor Swift born?: "))
-songname = input("What song of hers is named after a country music star?: ")
+#-------------------------------------------------------------------------------------------
 
-if(grammys == "10"):
+#Quiz questions with their answers saved to a variable
+
+grammys = (input("How many grammys has Beyonce  won?: ")
+middlename = input("What is Beyonce's middle name?: ")
+sign = input("What is Beyonce's astrological sign?: ")
+album = input("What is Beyonce's first album called?: ")
+kids = (input("How many kids does Beyonce have?: ")
+year = (input("What year was Beyonce  born?: ")
+artist = input("Who is featured on Beyonce's 2007 hit 'Beautiful Liar?': ")
+
+#Conditionals that check for if the answer is correct or not.
+#If correct, we will increment count by one
+
+if(grammys == "28" or grammys == "twenty eight" or grammys == "twenty-eight"):
     count+=1
    
-if(middlename.lower() == "alison"):
+if(middlename.lower() == "giselle"):
     count+=1
            
-if(longsong.lower() == "red"):
+if(sign.lower() == "virgo"):
     count+=1
 
-if(biggesthit.lower() == "shake it off"):
+if(album.lower() == "dangerously in love"):
     count+=1
 
-if(cats == "3"):
+if(kids == "3" or kids == "three"):
     count+=1
 
-if(year == "1989"):
+if(year == "1981"):
     count+=1
 
-if(songname.lower() == "tim mcgraw"):
+if(artist.lower() == "shakira"):
     count+=1
 
+#Prints Results of Quiz
 print(("You got "+str(count)+" out of 7 correct"))
 
+#Logic for what level of a Beyonce fan you are
 if(count == 7):
-    print("Congratulations, you are a militant Swiftie!")
-elif(count>=5 and count<7):
-    print("You are a lowkey Swiftie")
-elif(count>=3 and  count<5):
-    print("Your best friend is probably an annoying Swiftie")
+    print("Congratulations, you are a militant Beyhive member!")
+elif(count>=5):
+    print("You are a lowkey Beyhive supporter")
+elif(count>=3):
+    print("Your best friend probably won't shut up about Beyonce which is how you know certain things.")
 else:
-    print("You my friend, don't even listen to Taylor Swift")
+    print("You my friend, live under a rock.")
 
+#Goodbye message!
+print("Thanks for playing. Stream Renaissance!")
